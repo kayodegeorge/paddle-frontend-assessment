@@ -1,15 +1,17 @@
-import Hero from './components/Hero';
-import HeroForm from './components/HeroForm';
-import Navbar from './components/Navbar'
-import TimeCard from './components/TimeCard'
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Github from "./pages/Github";
+import ContactUs from "./pages/ContactUs";
+
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <Hero/>
-      <TimeCard/>
-      <HeroForm/>
-    </div>
+    <Routes>
+      <Route index element={<Home />} />
+      <Route path="About" element={<About />} />
+      <Route path="Github" element={<Github />} />
+      <Route path="ContactUs" element={<ContactUs />} />
+    </Routes>
   );
 }
 

@@ -2,30 +2,40 @@ import React from 'react'
 
 function HeroForm() {
   return (
-    <div className='container mx-auto px-2 md:px-64' >
-        <div className="flex flex-wrap justify-center">
-            <div className="w-full md:w-1/2">
-            <input
-  type="text"
-  name="name"
-  placeholder="First Name.."
-  class="appearance-none bg-transparent border-none w-full text-gray-800 mr-3 py-1 px-2 leading-tight focus:outline-none"
-/>
-
+    <div className="">
+      <div className="flex justify-center mx-auto my-10 space-x-6">
+        <div>
+          <input
+            type="text"
+            name="first name"
+            placeholder="First Name.."
+            class="bg-transparent px-4 py-2 border-b-2 border-gray-400 text-gray-800 outline-none focus:border-b-4"
+          />
         </div>
-        <div className="w-full md:w-1/2">
+        <div>
+          <input
+            type="text"
+            name="last name"
+            placeholder="Last Name.."
+            class="bg-transparent px-4 py-2 border-b-2 border-gray-400 text-gray-800 outline-none focus:border-b-4"
+          />
+        </div>
+      </div>
+
+      <div className="flex lg:w-[40%] mx-auto bg-white justify-center my-10 rounded-full">
         <input
-  type="text"
-  name="name"
-  placeholder="Last Name.."
-  class="w-1/3 px-4 py-2 border-b-2 border-gray-400 outline-none  focus:border-gray-400"
-/>
-<br />
-        </div>
-            </div> 
-
+          type="email"
+          placeholder="Enter your email address..."
+          className=" px-6 py-4 mr-auto flex-grow rounded-full outline-none focus:border-none"
+        />
+        <h1 className="px-6 py-4 ml-auto bg-blue-700 text-xs md:text-md text-white rounded-full font-bold">
+          JOIN OUR WAITING LIST
+        </h1>
+      </div>
     </div>
+    
   )
 }
 
 export default HeroForm
+
